@@ -1,6 +1,8 @@
 import streamlit as st
 import base64
 
+
+# generic function to load gifs into streamlit markdown from filepath
 def get_gif(filepath):
     file_ = open(filepath, "rb")
     contents = file_.read()
@@ -9,14 +11,15 @@ def get_gif(filepath):
     return data_url
 
 
-def home():
+def home(): # home page
 
     st.title("Home Page")
     st.write("Welcome to the Home page!")
 
+
+    # plotting gif
     filepath = "gifs/mainviz.gif"
     data_url = get_gif(filepath)
-
     st.markdown(
         f'<img src="data:image/gif;base64,{data_url}" alt="main viz">',
         unsafe_allow_html=True,
@@ -25,15 +28,12 @@ def home():
 
 def europe():
 
-
     st.title("Europe Page")
     st.write("Welcome to the Europe page!")
 
+    # plotting gif
     filepath = "gifs/Europeviz.gif"
     data_url = get_gif(filepath)
-
-    st.write(filepath)
-
     st.markdown(
         f'<img src="data:image/gif;base64,{data_url}" alt="main viz">',
         unsafe_allow_html=True,
@@ -46,9 +46,9 @@ def asia():
     st.write("Welcome to the Asia page!")
     st.write("Expect to wait a while before activity reaches Asia")
 
+    # plotting gif
     filepath = "gifs/Asiaviz.gif"
     data_url = get_gif(filepath)
-
     st.markdown(
         f'<img src="data:image/gif;base64,{data_url}" alt="main viz">',
         unsafe_allow_html=True,
