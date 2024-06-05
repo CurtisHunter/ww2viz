@@ -19,7 +19,7 @@ def home(): # home page
     st.write("")
     st.write("Watch as World War 2 unfolds, with an animated visualization of devastating bombings that shaped the course of the war across the globe.")
     st.write("")
-    st.write("Scroll down in this tab for a global bombing map animation, or the Europe/Asia tabs for their respective regions.")
+    st.write("Scroll down in this tab for a global bombing map animation, or the Europe/Asia tabs for their respective regions. If you cannot see the other tabs on the right, click the '>' symbol in the top left of the screen")
     st.image("images/pic1.jpg")
     st.markdown("### About the Data")
     st.write("The data is from The Theater History of Operations Reports (THOR) datase (see Acknowledgements tab for more info), and a public domain dataset with events throughout the years from Kaggle.")
