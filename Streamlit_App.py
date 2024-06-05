@@ -19,14 +19,14 @@ def home(): # home page
     st.write("")
     st.write("Watch as World War 2 unfolds, with an animated visualization of devastating bombings that shaped the course of the war across the globe.")
     st.write("")
-    st.write("See below in this tab for a global bombing map animation, or the Europe/Asia tabs for their respective regions.")
+    st.write("Scroll down in this tab for a global bombing map animation, or the Europe/Asia tabs for their respective regions.")
     st.image("images/pic1.jpg")
     st.markdown("### About the Data")
     st.write("The data is from The Theater History of Operations Reports (THOR) datase (see Acknowledgements tab for more info), and a public domain dataset with events throughout the years from Kaggle.")
     st.write("")
     st.write("This dataset only captures the bomb locations from Allied forces, although I am working on scraping further data relating to Axis bombing targets.")
     st.write("")
-    st.markdown("### Animation of (Allied) global bombing activity")
+    st.markdown("### Animation of (Allied) global bombing activity during WW2")
     # plotting gif
     filepath = "gifs/mainviz.gif"
     data_url = get_gif(filepath)
@@ -39,8 +39,8 @@ def home(): # home page
 def europe():
 
     st.title("Europe Page")
-    st.write("Welcome to the Europe page!")
-
+    st.write("Welcome to the Europe page. Please see below the map of European bombs as World War 2 unfolds.")
+    st.markdown("### Animation of (Allied) WW2 European bombing activity")
     # plotting gif
     filepath = "gifs/Europeviz.gif"
     data_url = get_gif(filepath)
@@ -58,12 +58,12 @@ def Acknowledgements():
 def asia():
 
     st.title("Asia Page")
-    st.write("Welcome to the Asia page!")
+    st.write("Welcome to the Asia page. Please see below the map of Asian/Australian bombs as World War 2 unfolds.")
+    st.write("")
+    st.write("Expect to wait a while before you see any activity in Asia.")
     st.write("")
     st.write("")
-    st.write("")
-    st.write("Expect to wait a while before activity reaches Asia")
-
+    st.markdown("### Animation of (Allied) WW2 Asian/Oceania bombing activity")
     # plotting gif
     filepath = "gifs/Asiaviz.gif"
     data_url = get_gif(filepath)
