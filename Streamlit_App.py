@@ -14,10 +14,19 @@ def get_gif(filepath):
 def home(): # home page
 
     st.title("World War 2 Bomings Animated")
+    st.markdown("### Intro")
     st.write("Welcome to my WW2 Bombings Dashboard!")
-    st.write("Watch as World War 2 unfolds, with an animated visualization of the bombing locations over the course of the war.")
-
-
+    st.write("")
+    st.write("Watch as World War 2 unfolds, with an animated visualization of devastating bombings that shaped the course of the war across the globe.")
+    st.write("")
+    st.write("See below in this tab for a global bombing map animation, or the Europe/Asia tabs for their respective regions.")
+    st.image("images/pic1.jpg")
+    st.markdown("### About the Data")
+    st.write("The data is from The Theater History of Operations Reports (THOR) datase (see Acknowledgements tab for more info), and a public domain dataset with events throughout the years from Kaggle.")
+    st.write("")
+    st.write("This dataset only captures the bomb locations from Allied forces, although I am working on scraping further data relating to Axis bombing targets.")
+    st.write("")
+    st.markdown("### Animation of (Allied) global bombing activity")
     # plotting gif
     filepath = "gifs/mainviz.gif"
     data_url = get_gif(filepath)
