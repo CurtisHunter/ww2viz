@@ -13,8 +13,9 @@ def get_gif(filepath):
 
 def home(): # home page
 
-    st.title("Home Page")
-    st.write("Welcome to the Home page!")
+    st.title("World War 2 Bomings Animated")
+    st.write("Welcome to my WW2 Bombings Dashboard!")
+    st.write("Watch as World War 2 unfolds, with an animated visualization of the bombing locations over the course of the war.")
 
 
     # plotting gif
@@ -39,11 +40,19 @@ def europe():
         unsafe_allow_html=True,
     )
 
+def Acknowledgements():
+    st.title("Acknowledgements")
+    st.write("1 - Lt Col Jenns Robertson of the US Air Force developed the Theater History of Operations Reports (THOR) and posted them online after receiving Department of Defense approval.")
+    st.write("2 - Events data is public domain, sourced from: https://www.kaggle.com/datasets/ramjasmaurya/world-war-2-archive")
+
 
 def asia():
 
     st.title("Asia Page")
     st.write("Welcome to the Asia page!")
+    st.write("")
+    st.write("")
+    st.write("")
     st.write("Expect to wait a while before activity reaches Asia")
 
     # plotting gif
@@ -57,7 +66,7 @@ def asia():
 
 def main():
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ["Home", "Europe", "Asia"])
+    page = st.sidebar.radio("Go to", ["Home", "Europe", "Asia", "Acknowledgements"])
 
     if page == "Home":
         home()
@@ -65,6 +74,8 @@ def main():
         europe()
     elif page == "Asia":
         asia()
+    elif page == "Acknowledgements":
+        Acknowledgements()
 
 
 if __name__ == "__main__":
